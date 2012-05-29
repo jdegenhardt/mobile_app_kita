@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
     <title>BI WebApp</title>
@@ -28,8 +28,8 @@
             padding-right: 8px;
             padding-top: 8px;
             border-width: 3px;
-            border-style: dotted;
-            border-color: lightblue;
+
+
             margin-bottom: 0px;
             margin-top: 0px;
         }
@@ -46,10 +46,38 @@
     </style>
     <!-- /Tabelle tr trennlinie Settings -->
 
+    <!-- Newstabelle Settings -->
+    <style type="text/css">
+        .newspic {
+            border-top-width: 3px;
+            border-bottom-width: 3px;
+            border-left-width: 3px;
+            border-right-width: 0px;
+            border-color: lightskyblue;
+            border-style: dotted;
+            margin-bottom: 5px;
+        }
+        .newsmsg {
+            border-top-width: 3px;
+            border-bottom-width: 3px;
+            border-left-width: 0px;
+            border-right-width: 3px;
+            border-color: lightskyblue;
+            border-style: dotted;
+            margin-bottom: 5px;
+        }
+        .newsdatum {
+            border-top-width: 1px;
+            border-top-style: solid;
+            border-top-color: lightskyblue;
+            margin-top: 10px;
+        }
+    </style>
+    <!-- /Newstabelle Settings -->
+
 </head>
 <body>
 
-<!-- Social Pages -->
 <div data-role="page" id="social" data-add-back-btn="false">
     <!-- header -->
     <div data-role="header" data-position="fixed">
@@ -57,7 +85,7 @@
         <!-- navbar -->
         <div data-role="navbar">
             <ul>
-                <li><a href="#landtag_homepage">Aktuelles</a></li>
+                <li><a href="#news">Aktuelles</a></li>
                 <li><a href="#social" class="ui-btn-active ui-state-persist">Social Media</a></li>
                 <li><a href="#berichte">Berichte</a></li>
             </ul>
@@ -78,7 +106,7 @@
         <!-- navbar -->
         <div data-role="navbar">
             <ul>
-                <li><a href="#landtag_homepage">Aktuelles</a></li>
+                <li><a href="#news">Aktuelles</a></li>
                 <li><a href="#social" class="ui-btn-active ui-state-persist">Social Media</a></li>
                 <li><a href="#berichte">Berichte</a></li>
             </ul>
@@ -99,7 +127,7 @@
         <!-- navbar -->
         <div data-role="navbar">
             <ul>
-                <li><a href="#landtag_homepage">Aktuelles</a></li>
+                <li><a href="#news">Aktuelles</a></li>
                 <li><a href="#social" class="ui-btn-active ui-state-persist">Social Media</a></li>
                 <li><a href="#berichte">Berichte</a></li>
             </ul>
@@ -120,7 +148,7 @@
         <!-- navbar -->
         <div data-role="navbar">
             <ul>
-                <li><a href="#landtag_homepage">Aktuelles</a></li>
+                <li><a href="#news">Aktuelles</a></li>
                 <li><a href="#social">Social Media</a></li>
                 <li><a href="#berichte" class="ui-btn-active ui-state-persist">Berichte</a></li>
             </ul>
@@ -133,7 +161,6 @@
     <!-- /content -->
 </div>
 
-
 <div data-role="page" id="berichte_kita" data-add-back-btn="false">
     <!-- header -->
     <div data-role="header" data-position="fixed">
@@ -142,7 +169,7 @@
         <!-- navbar -->
         <div data-role="navbar">
             <ul>
-                <li><a href="#landtag_homepage">Aktuelles</a></li>
+                <li><a href="#news">Aktuelles</a></li>
                 <li><a href="#social">Social Media</a></li>
                 <li><a href="#berichte" class="ui-btn-active ui-state-persist">Berichte</a></li>
             </ul>
@@ -152,6 +179,27 @@
     <!-- /header -->
     <!-- content -->
     <?php readfile("includes/berichte/kita.inc"); ?>
+    <!-- /content -->
+</div>
+
+<div data-role="page" id="news" data-add-back-btn="false">
+    <!-- header -->
+    <div data-role="header" data-position="fixed">
+        <h1>News</h1>
+        <a href="#berichte" data-icon="arrow-l" data-direction="reverse" data-transition="slide">Back</a>
+        <!-- navbar -->
+        <div data-role="navbar">
+            <ul>
+                <li><a href="#news" class="ui-btn-active ui-state-persist">Aktuelles</a></li>
+                <li><a href="#social">Social Media</a></li>
+                <li><a href="#berichte">Berichte</a></li>
+            </ul>
+        </div>
+        <!-- /navbar -->
+    </div>
+    <!-- /header -->
+    <!-- content -->
+    <?php readfile("includes/news.inc"); ?>
     <!-- /content -->
 </div>
 

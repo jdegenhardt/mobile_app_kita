@@ -1,9 +1,9 @@
 new TWTR.Widget({
     version:2,
     type:'search',
-    search:'SZ_Politik',
+    search:'Berlin Kindergarten',
     interval:30000,
-    title:'Bayrischer Landtag',
+    title:'KiTas Berlin',
     subject:'Aktuelle Geschehnisse',
     width:'auto',
     height:"100%",
