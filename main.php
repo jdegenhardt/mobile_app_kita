@@ -143,8 +143,7 @@
 <div data-role="page" id="berichte" data-add-back-btn="false">
     <!-- header -->
     <div data-role="header" data-position="fixed">
-        <h1>KiTapl&auml;tze</h1>
-        <a href="#berichte" data-icon="arrow-l" data-direction="reverse" data-transition="slide">Back</a>
+        <h1>Berichte</h1>
         <!-- navbar -->
         <div data-role="navbar">
             <ul>
@@ -186,7 +185,6 @@
     <!-- header -->
     <div data-role="header" data-position="fixed">
         <h1>News</h1>
-        <a href="#berichte" data-icon="arrow-l" data-direction="reverse" data-transition="slide">Back</a>
         <!-- navbar -->
         <div data-role="navbar">
             <ul>

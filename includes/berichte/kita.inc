@@ -6,37 +6,63 @@
             <th>Kosten in Mio. &euro;</th>
         </tr>
         <tr>
-            <td>Mittelfranken</td>
-            <td>75.000</td>
-            <td>2,2</td>
-        </tr>
-        <tr>
-            <td>Niederbayern</td>
-            <td>80.000</td>
-            <td>1,7</td>
-        </tr>
-        <tr>
-            <td>Oberbayern</td>
-            <td>85.000</td>
-            <td>3,1</td>
-        </tr>
-        <tr>
-            <td>Oberfranken</td>
-            <td>45.000</td>
-            <td>0,8</td>
-        </tr>
-        <tr>
-            <td>Oberpfalz</td>
-            <td>33.000</td>
-            <td>0,6</td>
-        </tr>
-        <tr>
-            <td>Schwaben</td>
+            <td>Charlottenburg-Wilmersdorf</td>
             <td>24.000</td>
             <td>0,4</td>
         </tr>
         <tr>
-            <td>Unterfranken</td>
+            <td>Friedrichshain-Kreuzberg</td>
+            <td>54.000</td>
+            <td>1,1</td>
+        </tr>
+        <tr>
+            <td>Lichtenberg</td>
+            <td>45.000</td>
+            <td>0,8</td>
+        </tr>
+        <tr>
+            <td>Marzahn-Hellersdorf</td>
+            <td>54.000</td>
+            <td>1,1</td>
+        </tr>
+        <tr>
+            <td>Mitte</td>
+            <td>33.000</td>
+            <td>0,6</td>
+        </tr>
+        <tr>
+            <td>Neuk&ouml;lln</td>
+            <td>54.000</td>
+            <td>1,1</td>
+        </tr>
+        <tr>
+            <td>Pankow</td>
+            <td>85.000</td>
+            <td>3,1</td>
+        </tr>
+        <tr>
+            <td>Reinickendorf</td>
+            <td>80.000</td>
+            <td>1,7</td>
+        </tr>
+        <tr>
+            <td>Spandau</td>
+            <td>75.000</td>
+            <td>2,2</td>
+        </tr>
+        <tr>
+            <td>Tempelhof-Sch&ouml;neberg</td>
+            <td>54.000</td>
+            <td>1,1</td>
+        </tr>
+
+        <tr>
+            <td>Treptow-K&ouml;penick</td>
+            <td>54.000</td>
+            <td>1,1</td>
+        </tr>
+        <tr>
+            <td>Zehlendorf-Steglitz</td>
             <td>54.000</td>
             <td>1,1</td>
         </tr>
