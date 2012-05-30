@@ -1,9 +1,9 @@
 new TWTR.Widget({
     version:2,
     type:'search',
-    search:'Berlin Kindergarten',
+    search:'#KiTa',
     interval:30000,
-    title:'KiTas Berlin',
+    title:'KiTas',
     subject:'Aktuelle Geschehnisse',
     width:'auto',
     height:"100%",

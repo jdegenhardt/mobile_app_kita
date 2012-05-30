@@ -62,7 +62,7 @@
         </tr>
         <tr>
             <td class="newspic"><img src="imgs/news/warning.png" width="35"></td>
-            <td class="newsmsg">Die Putzfrau beklagt sich &uuml;ber schlecht ablaufendes Wasser auf der Herrentoilette.</td>
+            <td class="newsmsg">Meldung &uuml;ber schlecht ablaufendes Wasser auf der Herrentoilette.</td>
         </tr>
         <tr>
             <td class="newspic"><img src="imgs/news/information.png" width="35"></td>
