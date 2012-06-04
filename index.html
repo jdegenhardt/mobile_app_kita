@@ -1,0 +1,503 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <title>BI WebApp</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="scripts/jQuery_mobile/jquery.mobile-1.1.0.css"/>
+    <script src="scripts/jQuery/jquery-1.7.2.js"></script>
+    <script src="scripts/jQuery_mobile/jquery.mobile-1.1.0.js"></script>
+
+    <!-- iframe Settings -->
+    <style type="text/css">
+        html, body { margin: 0; padding: 0; height: 100%; }
+        iframe {
+            position: absolute;
+            left: 0; width: 100%; height: 100%;
+            border: none; padding-top: 0px;
+            box-sizing: border-box; -moz-box-sizing: border-box; -webkit-box-sizing: border-box;
+        }
+    </style>
+    <!-- /iframe Settings -->
+
+    <!-- paragraph border Settings -->
+    <style type="text/css">
+        p {
+            padding-bottom: 8px;
+            padding-left: 8px;
+            padding-right: 8px;
+            padding-top: 8px;
+            border-width: 3px;
+
+
+            margin-bottom: 0px;
+            margin-top: 0px;
+        }
+    </style>
+    <!-- /paragraph border Settings -->
+
+    <!-- Tabelle tr trennlinie Settings -->
+    <style type="text/css">
+        .tabellenlinie:first-child {
+            border-top-width: 1px;
+            border-top-style: solid;
+            border-top-color: lightskyblue;
+        }
+    </style>
+    <!-- /Tabelle tr trennlinie Settings -->
+
+    <!-- Newstabelle Settings -->
+    <style type="text/css">
+        .newspic {
+            border-top-width: 3px;
+            border-bottom-width: 3px;
+            border-left-width: 3px;
+            border-right-width: 0px;
+            border-color: lightskyblue;
+            border-style: dotted;
+            margin-bottom: 5px;
+        }
+        .newsmsg {
+            border-top-width: 3px;
+            border-bottom-width: 3px;
+            border-left-width: 0px;
+            border-right-width: 3px;
+            border-color: lightskyblue;
+            border-style: dotted;
+            margin-bottom: 5px;
+        }
+        .newsdatum {
+            border-top-width: 1px;
+            border-top-style: solid;
+            border-top-color: lightskyblue;
+            margin-top: 10px;
+        }
+    </style>
+    <!-- /Newstabelle Settings -->
+
+</head>
+<body>
+
+<div data-role="page" id="social" data-add-back-btn="false">
+    <!-- header -->
+    <div data-role="header" data-position="fixed">
+        <h1>Social Media</h1>
+        <!-- navbar -->
+        <div data-role="navbar">
+            <ul>
+                <li><a href="#news">Aktuelles</a></li>
+                <li><a href="#social" class="ui-btn-active ui-state-persist">Social Media</a></li>
+                <li><a href="#berichte">Berichte</a></li>
+            </ul>
+        </div>
+        <!-- /navbar -->
+    </div>
+    <!-- /header -->
+    <!-- content -->
+    <div data-role="content">
+        <fieldset class="ui-grid-a">
+            <div class="ui-block-a"><a href="#social_facebook" data-role="button"><img src="imgs/social_media/facebook.png"></a></div>
+            <div class="ui-block-b"><a href="#social_twitter" data-role="button"><img src="imgs/social_media/twitter.png"></a></div>
+            <div class="ui-block-a"><a href="#social_google" data-role="button"><img src="imgs/social_media/google.png"></a></div>
+            <div class="ui-block-b"><a href="#social_xing" data-role="button"><img src="imgs/social_media/xing.png"></a></div>
+            <div class="ui-block-a"><a href="#social_linkedin" data-role="button"><img src="imgs/social_media/linkedin.png"></a></div>
+            <div class="ui-block-b"><a href="#social_rss" data-role="button"><img src="imgs/social_media/rss.png"></a></div>
+        </fieldset>
+    </div>    <!-- /content -->
+</div>
+
+<div data-role="page" id="social_facebook" data-add-back-btn="false">
+    <!-- header -->
+    <div data-role="header" data-position="fixed">
+        <h1>Facebook</h1>
+        <a href="#social" data-icon="arrow-l">Back</a>
+        <!-- navbar -->
+        <div data-role="navbar">
+            <ul>
+                <li><a href="#news">Aktuelles</a></li>
+                <li><a href="#social" class="ui-btn-active ui-state-persist">Social Media</a></li>
+                <li><a href="#berichte">Berichte</a></li>
+            </ul>
+        </div>
+        <!-- /navbar -->
+    </div>
+    <!-- /header -->
+    <!-- content -->
+    <div data-role="content">
+        <script type="text/javascript" src="scripts/facebook.js"></script>
+
+        <table border="0px" width="auto">
+            <tr>
+                <td>
+                    <div id="SeiteUndLikes"></div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div id="Veranstaltungen">Dies sind die
+                        Top 3 aktuell kontroversen Nachrichten:
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td class="tabellenlinie">
+                    <table border="0px">
+                        <tr>
+                            <td colspan=2><p id="M1"></p></td>
+                        </tr>
+                        <tr>
+                            <td align="left"><div id="M1Likes"><img src="imgs/social_media/facebook/ilike.png"></div></td>
+                            <td align="right"><div id="M1Comments"><img src="imgs/social_media/facebook/comments.png"></div></td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td class="tabellenlinie">
+                    <table border="0px">
+                        <tr>
+                            <td colspan=2><p id="M2"></p></td>
+                        </tr>
+                        <tr>
+                            <td align="left"><div id="M2Likes"><img src="imgs/social_media/facebook/ilike.png"></div></td>
+                            <td align="right"><div id="M2Comments"><img src="imgs/social_media/facebook/comments.png"></div></td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td class="tabellenlinie">
+                    <table border="0px">
+                        <tr>
+                            <td colspan=2><p id="M3"></p></td>
+                        </tr>
+                        <tr>
+                            <td align="left"><div id="M3Likes"><img src="imgs/social_media/facebook/ilike.png"></div></td>
+                            <td align="right"><div id="M3Comments"><img src="imgs/social_media/facebook/comments.png"></div></td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+    </div>    <!-- /content -->
+</div>
+
+<div data-role="page" id="social_twitter" data-add-back-btn="false">
+    <!-- header -->
+    <div data-role="header" data-position="fixed">
+        <h1>Twitternews</h1>
+        <a href="#social" data-icon="arrow-l">Back</a>
+        <!-- navbar -->
+        <div data-role="navbar">
+            <ul>
+                <li><a href="#news">Aktuelles</a></li>
+                <li><a href="#social" class="ui-btn-active ui-state-persist">Social Media</a></li>
+                <li><a href="#berichte">Berichte</a></li>
+            </ul>
+        </div>
+        <!-- /navbar -->
+    </div>
+    <!-- /header -->
+    <!-- content -->
+    <div data-role="content">
+        <script charset="utf-8" src="http://widgets.twimg.com/j/2/widget.js"></script>
+        <script type="text/javascript" src="scripts/twitter.js"></script>
+    </div>    <!-- /content -->
+</div>
+
+<div data-role="page" id="berichte" data-add-back-btn="false">
+    <!-- header -->
+    <div data-role="header" data-position="fixed">
+        <h1>Berichte</h1>
+        <!-- navbar -->
+        <div data-role="navbar">
+            <ul>
+                <li><a href="#news">Aktuelles</a></li>
+                <li><a href="#social">Social Media</a></li>
+                <li><a href="#berichte" class="ui-btn-active ui-state-persist">Berichte</a></li>
+            </ul>
+        </div>
+        <!-- /navbar -->
+    </div>
+    <!-- /header -->
+    <!-- content -->
+    <div data-role="content">
+        <ul data-role="listview" data-inset="true" data-filter="false">
+            <li><a href="#berichte_kita" data-transition="slide">KiTa Pl&auml;tze Berlin</a></li>
+            <li><a href="#berichte_umfrage" data-transition="slide">KiTa Umfrageauswertung</a></li>
+        </ul>
+    </div>    <!-- /content -->
+</div>
+
+<div data-role="page" id="berichte_kita" data-add-back-btn="false">
+    <!-- header -->
+    <div data-role="header" data-position="fixed">
+        <h1>KiTapl&auml;tze</h1>
+        <a href="#berichte" data-icon="arrow-l" data-direction="reverse" data-transition="slide">Back</a>
+        <!-- navbar -->
+        <div data-role="navbar">
+            <ul>
+                <li><a href="#news">Aktuelles</a></li>
+                <li><a href="#social">Social Media</a></li>
+                <li><a href="#berichte" class="ui-btn-active ui-state-persist">Berichte</a></li>
+            </ul>
+        </div>
+        <!-- /navbar -->
+    </div>
+    <!-- /header -->
+    <!-- content -->
+    <div data-role="content">
+        <table>
+            <tr>
+                <th>Regierungsbezirk</th>
+                <th>KiTapl&auml;tze</th>
+                <th>Kosten in Mio. &euro;</th>
+            </tr>
+            <tr>
+                <td>Charlottenburg-Wilmersdorf</td>
+                <td>24.000</td>
+                <td>0,4</td>
+            </tr>
+            <tr>
+                <td>Friedrichshain-Kreuzberg</td>
+                <td>54.000</td>
+                <td>1,1</td>
+            </tr>
+            <tr>
+                <td>Lichtenberg</td>
+                <td>45.000</td>
+                <td>0,8</td>
+            </tr>
+            <tr>
+                <td>Marzahn-Hellersdorf</td>
+                <td>54.000</td>
+                <td>1,1</td>
+            </tr>
+            <tr>
+                <td>Mitte</td>
+                <td>33.000</td>
+                <td>0,6</td>
+            </tr>
+            <tr>
+                <td>Neuk&ouml;lln</td>
+                <td>54.000</td>
+                <td>1,1</td>
+            </tr>
+            <tr>
+                <td>Pankow</td>
+                <td>85.000</td>
+                <td>3,1</td>
+            </tr>
+            <tr>
+                <td>Reinickendorf</td>
+                <td>80.000</td>
+                <td>1,7</td>
+            </tr>
+            <tr>
+                <td>Spandau</td>
+                <td>75.000</td>
+                <td>2,2</td>
+            </tr>
+            <tr>
+                <td>Tempelhof-Sch&ouml;neberg</td>
+                <td>54.000</td>
+                <td>1,1</td>
+            </tr>
+
+            <tr>
+                <td>Treptow-K&ouml;penick</td>
+                <td>54.000</td>
+                <td>1,1</td>
+            </tr>
+            <tr>
+                <td>Zehlendorf-Steglitz</td>
+                <td>54.000</td>
+                <td>1,1</td>
+            </tr>
+        </table>
+    </div>    <!-- /content -->
+</div>
+
+<div data-role="page" id="berichte_umfrage" data-add-back-btn="false">
+    <!-- header -->
+    <div data-role="header" data-position="fixed">
+        <h1>KiTaumfrage</h1>
+        <a href="#berichte" data-icon="arrow-l" data-direction="reverse" data-transition="slide">Back</a>
+        <!-- navbar -->
+        <div data-role="navbar">
+            <ul>
+                <li><a href="#news">Aktuelles</a></li>
+                <li><a href="#social">Social Media</a></li>
+                <li><a href="#berichte" class="ui-btn-active ui-state-persist">Berichte</a></li>
+            </ul>
+        </div>
+        <!-- /navbar -->
+    </div>
+    <!-- /header -->
+    <!-- content -->
+    <div data-role="content">
+        <iframe id="iframeID" width="405" height="600" src="http://eit-bon-nb017:8900/iportal/iv?__report=%2fHome%2fMeier%2fumfrage_auswertungsportlet_mobile.RPTDOCUMENT&__design=%2fHome%2fMeier%2fumfrage_auswertungsportlet_mobile.rptdesign&__vp=eit_bon_nb017&userID=Meier&password="></iframe>
+    </div>    <!-- /content -->
+</div>
+
+<div data-role="page" id="news" data-add-back-btn="false">
+    <!-- header -->
+    <div data-role="header" data-position="fixed">
+        <h1>News</h1>
+        <!-- navbar -->
+        <div data-role="navbar">
+            <ul>
+                <li><a href="#news" class="ui-btn-active ui-state-persist">Aktuelles</a></li>
+                <li><a href="#social">Social Media</a></li>
+                <li><a href="#berichte">Berichte</a></li>
+            </ul>
+        </div>
+        <!-- /navbar -->
+    </div>
+    <!-- /header -->
+    <!-- content -->
+    <div data-role="content">
+
+        <select name="select" id="select" data-mini="true">
+            <option value="1">Filter...</option>
+            <option value="2">Mitarbeiterinfos</option>
+            <option value="3">Unternehmensinfos</option>
+            <option value="4">Gruppeninfos</option>
+        </select>
+
+        <script type="text/javascript">
+            $('#select').change(function()
+            {
+                var tableid = '#news_table_' + $(this).attr('value');
+                for (var i=1; i <= 4; i++){
+                    $('#news_table_'+i).attr('style', 'display:none;');
+                }
+                $(tableid).attr('style', 'display:table;');
+            });
+
+            function getDatum(abzuziehendeTageVonHeute){
+                var currentTime = new Date();
+                currentTime.setDate(currentTime.getDate() - abzuziehendeTageVonHeute);
+                var month = currentTime.getMonth() + 1;
+                var day = currentTime.getDate();
+                var year = currentTime.getFullYear();
+                return day + "." + month + "." + year;
+            }
+
+
+        </script>
+
+        <br />
+
+
+        <table id="news_table_1" style="display:table;">
+            <colgroup>
+                <col width="35">
+                <col>
+            </colgroup>
+            <tr>
+                <th colspan=2><script type="text/javascript">document.write(getDatum(1));</script></th>
+            </tr>
+            <tr>
+                <td class="newspic"><img src="imgs/news/warning.png" width="35"></td>
+                <td class="newsmsg">Im kommenden Quartal werden vorraussichtlich 15 zus&auml;tzliche KiTa- Pl&auml;tze ben&ouml;tigt.</td>
+            </tr>
+            <tr>
+                <td class="newspic"><img src="imgs/news/information.png" width="35"></td>
+                <td class="newsmsg">Die Anmeldung zur Infoveranstaltung zum Thema "Inklusion" ist nun m&ouml;glich.</td>
+            </tr>
+            <tr><td colspan=2>&nbsp;</td></tr>
+            <tr>
+                <th colspan=2><script type="text/javascript">document.write(getDatum(3));</script></th>
+            </tr>
+            <tr>
+                <td class="newspic"><img src="imgs/news/alarm.png" width="35"></td>
+                <td class="newsmsg">Wegen einem Wasserrohrbruch ist die Nutzung der Toiletten derzeit nicht m&ouml;glich.</td>
+            </tr>
+            <tr><td colspan=2>&nbsp;</td></tr>
+            <tr>
+                <th colspan=2 class="newsdatum"><script type="text/javascript">document.write(getDatum(5));</script></th>
+            </tr>
+            <tr>
+                <td class="newspic"><img src="imgs/news/warning.png" width="35"></td>
+                <td class="newsmsg">Meldung &uuml;ber schlecht ablaufendes Wasser auf der Herrentoilette.</td>
+            </tr>
+            <tr>
+                <td class="newspic"><img src="imgs/news/information.png" width="35"></td>
+                <td class="newsmsg">Die Regenbogengruppe nimmt heute 2 neue Kinder auf.</td>
+            </tr>
+            <tr>
+                <td class="newspic">&nbsp;</td>
+                <td class="newsmsg">Die Quartalszahlen liegen nun offiziell vor.</td>
+            </tr>
+            <tr><td colspan=2>&nbsp;</td></tr>
+            <tr>
+                <th colspan=2 class="newsdatum"><script type="text/javascript">document.write(getDatum(7));</script></th>
+            </tr>
+            <tr>
+                <td class="newspic"><img src="imgs/news/information.png" width="35"></td>
+                <td class="newsmsg">Die Anmeldung zur Fortbildung zum zertifizierten Tagesst&auml;ttenleiter ist nun m&ouml;glich.</td>
+            </tr>
+        </table>
+
+        <table id="news_table_2" style="display:none;">
+            <colgroup>
+                <col width="35">
+                <col>
+            </colgroup>
+            <tr>
+                <th colspan=2><script type="text/javascript">document.write(getDatum(1));</script></th>
+            </tr>
+            <tr>
+                <td class="newspic"><img src="imgs/news/information.png" width="35"></td>
+                <td class="newsmsg">Die Anmeldung zur Infoveranstaltung zum Thema "Inklusion" ist nun m&ouml;glich.</td>
+            </tr>
+            <tr><td colspan=2>&nbsp;</td></tr>
+            <tr>
+                <th colspan=2 class="newsdatum"><script type="text/javascript">document.write(getDatum(7));</script></th>
+            </tr>
+            <tr>
+                <td class="newspic"><img src="imgs/news/information.png" width="35"></td>
+                <td class="newsmsg">Die Anmeldung zur Fortbildung zum zertifizierten Tagesst&auml;ttenleiter ist nun m&ouml;glich.</td>
+            </tr>
+        </table>
+
+        <table id="news_table_3" style="display:none;">
+            <colgroup>
+                <col width="35">
+                <col>
+            </colgroup>
+            <tr>
+                <th colspan=2><script type="text/javascript">document.write(getDatum(1));</script></th>
+            </tr>
+            <tr>
+                <td class="newspic"><img src="imgs/news/warning.png" width="35"></td>
+                <td class="newsmsg">Im kommenden Quartal werden vorraussichtlich 15 zus&auml;tzliche KiTa- Pl&auml;tze ben&ouml;tigt.</td>
+            </tr>
+            <tr>
+                <th colspan=2 class="newsdatum"><script type="text/javascript">document.write(getDatum(5));</script></th>
+            </tr>
+            <tr>
+                <td class="newspic">&nbsp;</td>
+                <td class="newsmsg">Die Quartalszahlen liegen nun offiziell vor.</td>
+            </tr>
+        </table>
+
+        <table id="news_table_4" style="display:none;">
+            <colgroup>
+                <col width="35">
+                <col>
+            </colgroup>
+            <tr>
+                <th colspan=2 class="newsdatum"><script type="text/javascript">document.write(getDatum(5));</script></th>
+            </tr>
+            <tr>
+                <td class="newspic"><img src="imgs/news/information.png" width="35"></td>
+                <td class="newsmsg">Die Regenbogengruppe nimmt heute 2 neue Kinder auf.</td>
+            </tr>
+        </table>
+    </div>    <!-- /content -->
+</div>
+
+</body>
+</html>
