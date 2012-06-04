@@ -181,6 +181,27 @@
     <!-- /content -->
 </div>
 
+<div data-role="page" id="berichte_umfrage" data-add-back-btn="false">
+    <!-- header -->
+    <div data-role="header" data-position="fixed">
+        <h1>KiTaumfrage</h1>
+        <a href="#berichte" data-icon="arrow-l" data-direction="reverse" data-transition="slide">Back</a>
+        <!-- navbar -->
+        <div data-role="navbar">
+            <ul>
+                <li><a href="#news">Aktuelles</a></li>
+                <li><a href="#social">Social Media</a></li>
+                <li><a href="#berichte" class="ui-btn-active ui-state-persist">Berichte</a></li>
+            </ul>
+        </div>
+        <!-- /navbar -->
+    </div>
+    <!-- /header -->
+    <!-- content -->
+    <?php readfile("includes/berichte/umfrage.inc"); ?>
+    <!-- /content -->
+</div>
+
 <div data-role="page" id="news" data-add-back-btn="false">
     <!-- header -->
     <div data-role="header" data-position="fixed">
